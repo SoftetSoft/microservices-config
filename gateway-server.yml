@@ -20,3 +20,12 @@ eureka:
   instance:
     prefer-ip-address: true
     hostname: localhost
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"          # exposes all actuator endpoints (good for local dev)
+  endpoint:
+    env:
+      show-values: ALWAYS     # VERY IMPORTANT → shows real values instead of ****
